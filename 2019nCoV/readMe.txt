@@ -27,3 +27,8 @@ make install
 
 python setup.py install
         执行这些步骤的时间会比较久，大概10分钟，需要耐心等待
+
+图为圆柱投影，这也是Basemap默认的投影模式，我们还可以换用其他投影模式，比如兰勃托等角投影，只需要将97行代码改为：
+m = Basemap(projection='lcc', width=5000000, height=5000000, lat_0=36, lon_0=102, resolution='l', ax=axes)
+还可以使用正射投影：
+m = Basemap(projection='ortho', lat_0=30, lon_0=105, resolution='l', ax=axes)
